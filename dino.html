@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: ../../assets/targets/trex.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <a-asset-item id="mosaModel" src="../../assets/models/mosasaurus/scene.gltf"></a-asset-item>
+        <a-asset-item id="longModel" src="../../assets/models/mamen_river_dragon/scene.gltf"></a-asset-item>
+        <a-asset-item id="pteraModel" src="../../assets/models/animated_flying_pteradactal_dinosaur_loop/scene.gltf"></a-asset-item>
+        <a-asset-item id="triModel" src="../../assets/models/triceratops/scene.gltf"></a-asset-item>
+        <a-asset-item id="rhinoModel" src="../../assets/models/animated_3d_grey_rhino_running_loop/scene.gltf"></a-asset-item>
+        <a-asset-item id="trexModel" src="../../assets/models/animated_t-rex_dinosaur_biting_attack_loop/scene.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.90 0" scale="0.03 0.03 0.03" src="#mosaModel" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.90 0" scale="0.03 0.03 0.03" src="#longModel" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 2">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.90 0" scale="0.03 0.03 0.03" src="#pteraModel" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 3">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.90 0" scale="0.03 0.03 0.03" src="#triModel" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 4">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.90 0" scale="0.03 0.03 0.03" src="#rhinoModel" animation-mixer>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 5">
+        <a-gltf-model rotation="0 0 0 " position="0 -0.90 0" scale="0.03 0.03 0.03" src="#trexModel" animation-mixer>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
